@@ -1,0 +1,33 @@
+# DataBase Entry
+# This Program Check's User Entry With A List Of Fruits If The Fruit Is Not In The List It Will Be Added To The List
+# Introduction Statement
+print("""
+Hello User, Welcome to the Fruit DataBase!
+This DataBase Checks to See if a Fruit is Recognized
+if Not it Will Add it to the DataBase
+""")
+# Empty String To Store User Entry
+enter = ""
+# List Of Fruits Already Within Program
+fruits = ["apple", "orange", "banana", "grapes", "grapefruit", "clementine", "tangerine"]
+# While Loop For Continuous Input
+while enter != "quit":
+# This Input Enables Continuous Input & Lower Method Ensures All Input Is In Lowercase
+    enter = input("Enter a Fruit: ").lower()
+# If Statement Is Used To Predicate Boolean IE "NOT IN" Checks To See If The User Input Is Not In The List
+    if enter not in fruits:
+# Append then Stitches User Input To The End Of The List
+        fruits.append(enter)
+# Print Statement
+        print("Fruit Added to DataBase")
+# Alternative To The First Boolean IE "IN" Checks To See IfThe User Input Is In The List
+    elif enter in fruits:
+# Print Statement
+        print("That Fruit is Already in the DataBase")
+# Else When Enter Equals Quit
+else:
+# Because This Way Of Coding Appends Every User Entry To The List The Quit Command Is Also Added
+# Pop Method Removes The Last Item In A List
+    fruits.pop()
+# Prints List
+    print(fruits)
